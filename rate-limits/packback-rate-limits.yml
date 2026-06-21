@@ -1,0 +1,52 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Packback
+providerId: packback
+created: '2026-06-21'
+modified: '2026-06-21'
+reconciled: false
+tags:
+- Education
+- EdTech
+- AI
+- LTI
+- Rate Limiting
+- Quotas
+description: >-
+  Packback does not publish a public developer REST API, and therefore does not
+  publish developer-facing rate limits (RPM/TPM/quotas). The integration
+  surface is the IMS Global LTI standard; any throttling that exists applies to
+  LTI launches, Assignment and Grade Services (AGS) grade passback, and
+  Names and Role Provisioning Services (NRPS) roster calls between the LMS and
+  Packback, and is governed by the LMS and Packback's internal infrastructure
+  rather than a documented public quota. No reconcilable rate-limit values are
+  published.
+notes: >-
+  If and when Packback publishes a public API with documented limits, reconcile
+  this artifact. Until then, limits relevant to integrators are those imposed by
+  the LMS on LTI Advantage service calls (AGS / NRPS), not by a Packback API.
+sources:
+- https://packback.co/lti-integration/
+- https://help.packback.co
+responseCodes:
+  throttled: not documented
+limits:
+- name: Public REST API Limits
+  scope: account
+  metric: requests
+  limit: not applicable - no public REST API
+  notes: Packback does not publish a public developer REST API; there are no documented developer rate limits.
+- name: LTI Advantage Service Calls (AGS / NRPS)
+  scope: integration
+  metric: requests
+  limit: governed by the LMS and platform, not publicly documented
+  notes: Grade passback (AGS) and roster (NRPS) calls between the LMS and Packback follow LMS-side and platform-side limits; no public values published.
+policies:
+- name: LMS-Governed Throttling
+  description: Any throttling of LTI service calls is governed by the LMS platform and Packback's infrastructure, not a published public quota.
+- name: No Public API Quotas
+  description: With no public developer API, there are no API keys, plans, or documented per-key rate limits to honor.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

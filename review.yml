@@ -1,0 +1,94 @@
+aid: packback
+name: Packback
+review:
+  question: Does Packback expose a documented public REST API for developers?
+  answer: false
+  date: '2026-06-21'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No event-driven, WebSocket, or SSE surface is documented for Packback, so
+    no AsyncAPI document was authored. Packback's only published integration
+    surface is the IMS Global LTI standard (request/response launches and
+    LTI Advantage services), which is modeled by the 1EdTech LTI
+    specifications themselves rather than by an AsyncAPI document.
+findings:
+  summary: |
+    Packback does not publish a public, developer-facing REST API for its
+    Questions/Discussions, Writing, or Deep Dives products. Packback is a
+    SaaS instructional platform that students and instructors use inside
+    their Learning Management System (LMS). The product surface is reached
+    through the IMS Global Learning Tools Interoperability (LTI) standard,
+    for which Packback is 1EdTech certified at LTI 1.0, 1.2, and 1.3 (LTI
+    Advantage). LTI provides single sign-on, deep linking, automatic course
+    community provisioning, and gradebook / grade passback synchronization
+    across major LMSs (Canvas, Blackboard, Brightspace, Moodle, Schoology,
+    Google Classroom, ClassLink, Clever, and any IMS-compliant LMS). The
+    only published developer artifact is Packback's open-source LTI 1.3 PHP
+    tool-provider library on GitHub and Packagist - a building block for
+    LTI tool providers in general, not a client SDK against a Packback API.
+    No public API reference, API keys, OAuth-for-data, or REST endpoints
+    were found.
+  integrationSurfaces:
+    - type: LTI
+      versions:
+        - LTI 1.0
+        - LTI 1.2
+        - LTI 1.3 (LTI Advantage)
+      certified: true
+      certifyingBody: 1EdTech (formerly IMS Global)
+      capabilities:
+        - Single Sign-On (SSO) into course communities
+        - Deep Linking / content selection
+        - Automatic discussion community provisioning
+        - Gradebook sync / grade passback (AGS in LTI 1.3; assignment linking in 1.0/1.2)
+        - Packback Sendback - Originality Fingerprint surfaced via LTI 1.3 asset processor (Canvas)
+      documented: true
+    - type: REST API (public, developer-facing)
+      documented: false
+      note: No public REST API reference, base URL, authentication scheme, or endpoints are documented by Packback.
+    - type: Open-source library
+      name: lti-1-3-php-library / lti-1p3-tool
+      url: https://github.com/packbackbooks/lti-1-3-php-library
+      packagist: https://packagist.org/packages/packbackbooks/lti-1p3-tool
+      note: A library for building IMS-certified LTI 1.3 tool providers in PHP, maintained by Packback; not a client SDK for a Packback API.
+  supportedLMS:
+    - Canvas
+    - Blackboard
+    - Brightspace (D2L)
+    - Moodle
+    - Schoology
+    - Google Classroom
+    - ClassLink
+    - Clever
+    - Any LMS implementing the IMS Global LTI standard
+sources:
+  - url: https://packback.co/platform/
+    type: Documentation
+    note: Lists products (Discussions, Writing, Originality, Writing Lab) and states integration is via LTI Advantage across eight LMSs; no API reference.
+  - url: https://packback.co/lti-integration/
+    type: Documentation
+    note: Describes LTI 1.0/1.2/1.3 certification, SSO, gradebook sync, deep linking, and Packback Sendback (LTI 1.3 asset processor).
+  - url: https://packback.co/product/deep-dives/
+    type: Documentation
+    note: Describes the Deep Dives / Writing AI feedback product; no developer API surface.
+  - url: https://github.com/packbackbooks
+    type: GitHub
+    note: Packback's GitHub org; LTI 1.3 PHP library is the only integration-oriented public repo. No public Packback API client/SDK.
+  - url: https://packagist.org/packages/packbackbooks/lti-1p3-tool
+    type: Packagist
+    note: Composer package for the LTI 1.3 PHP tool-provider library.
+actions:
+  openapiPath: openapi/packback-openapi.yml
+  apisYmlUpdated: true
+  reason: |
+    Because no public REST API is documented, the OpenAPI document was
+    authored with an empty paths object ({}) and an info.description that
+    explicitly records the absence of a public API and points to Packback's
+    LTI-based integration surface. No endpoints were fabricated. The apis.yml
+    catalogs the three real product/integration surfaces (Questions/
+    Discussions, Writing/Deep Dives, and LTI Integration) with accurate human
+    URLs.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,93 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Packback
+providerId: packback
+created: '2026-06-21'
+modified: '2026-06-21'
+reconciled: false
+tags:
+- Education
+- EdTech
+- AI
+- LTI
+- FinOps
+- Cost Management
+description: >-
+  FinOps view of Packback spend. Packback is an institutional / per-student
+  educational SaaS, not a usage-metered developer API, so there is no per-token,
+  per-request, or per-call API meter to instrument. Cost is driven by the
+  commercial model - per-student course access and/or institutional site
+  licensing - and is governed by procurement and contract management rather than
+  cloud-style usage telemetry. This artifact is unreconciled because Packback
+  does not publish public pricing or usage exports.
+notes: >-
+  Because there is no public developer API, classic API FinOps levers (batching,
+  caching, model selection, token optimization) do not apply. The relevant cost
+  levers are enrollment-based licensing, product-mix scoping, and contract
+  negotiation. Verify figures with Packback sales during reconciliation.
+sources:
+- https://packback.co/
+- https://packback.co/platform/
+- https://packback.co/lti-integration/
+- https://focus.finops.org/focus-specification/v1-3/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Packback
+serviceCategory: Education and Learning Technology
+billingModel:
+  pricingCategory: Subscription-Based
+  billingFrequency: Annual or per-term
+  billingCurrency: USD
+  chargeCategories:
+  - Purchase
+  - Usage
+focusColumns:
+  ServiceName: Packback
+  ServiceCategory: Education and Learning Technology
+  ProviderName: Packback
+  PublisherName: Packback
+  InvoiceIssuerName: Packback
+  BillingCurrency: USD
+  ChargeCategory: Purchase
+  PricingCategory: Subscription-Based
+meters:
+- name: enrolled_students
+  description: Students with access to Packback products in a course or term; primary driver of per-student licensing cost.
+  unit: students
+  aggregation: sum
+  dimensions:
+  - institution
+  - course
+  - term
+  - product
+- name: course_sections
+  description: Course sections or communities provisioned via LTI; relevant to course-level packaging.
+  unit: sections
+  aggregation: sum
+  dimensions:
+  - institution
+  - term
+- name: institutional_license
+  description: Flat institutional / site-license commitment negotiated by contract.
+  unit: contract
+  aggregation: max
+  dimensions:
+  - institution
+  - year
+principles:
+- name: Visibility
+  description: Track enrollment and active course communities per institution/term against the contracted license.
+- name: Allocation
+  description: Allocate per-student or site-license cost to departments, programs, or grant funding lines.
+- name: Optimization
+  description: Scope the product mix (Discussions vs. Writing vs. Deep Dives) and enrollment to actual usage; negotiate inclusive-access terms.
+- name: Accountability
+  description: Assign a program/department owner for the Packback contract and review utilization vs. spend each term.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

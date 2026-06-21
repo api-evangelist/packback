@@ -1,0 +1,109 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Packback
+providerId: packback
+created: '2026-06-21'
+modified: '2026-06-21'
+reconciled: false
+tags:
+- Education
+- EdTech
+- AI
+- Discussion
+- Writing Feedback
+- LTI
+- Plans
+description: >-
+  Packback is sold as an institutional / per-student educational SaaS product,
+  not as a metered developer API. Pricing is not publicly published as
+  self-serve tiers; it is negotiated per institution, course, or program, and
+  in many adoptions a per-student course-materials fee is charged (often paid
+  by the student through the LMS / course-materials channel, or covered by the
+  institution through an inclusive-access agreement). Because there is no public
+  developer API, there are no token, request, or call-based usage plans to
+  reconcile. The plan entries below describe the commercial packaging honestly
+  and are marked unreconciled because exact figures are not publicly listed.
+notes: >-
+  Specific per-student and institutional prices are not published on Packback's
+  public site and vary by product mix, enrollment, and contract term. Contact
+  Packback sales for a quote. Reconciled is false because no public price list
+  exists to verify.
+sources:
+- https://packback.co/
+- https://packback.co/platform/
+- https://packback.co/lti-integration/
+plans:
+- id: packback-per-student
+  name: Per-Student / Course Access
+  type: subscription
+  description: >-
+    Student or course-level access to Packback products (Questions /
+    Discussions, Writing, Deep Dives) for the duration of a course or term,
+    frequently delivered through inclusive-access / course-materials billing
+    via the LMS. Exact per-student price is not publicly listed.
+  entries:
+  - label: Per-Student Course Access
+    name: per_student
+    type: subscription
+    metric: students
+    limit: -1
+    timeFrame: term
+    geo: global
+    unit: 1
+    price: contact sales (per-student, not publicly listed)
+    userMultiplied: true
+  elements:
+  - name: Packback Questions / Discussions
+  - name: Packback Writing
+  - name: Packback Deep Dives
+  - name: AI Coaching and Feedback
+  - name: LMS / LTI Access
+- id: packback-institutional
+  name: Institutional / Site License
+  type: enterprise
+  description: >-
+    Department-, program-, or institution-wide licensing with negotiated terms,
+    onboarding, LTI integration support, and administrative analytics. Pricing
+    negotiated with Packback sales.
+  entries:
+  - label: Institutional Agreement
+    name: institutional
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+  elements:
+  - name: Site / Program Licensing
+  - name: LTI Advantage Integration (Canvas, Blackboard, Brightspace, Moodle, Schoology, Google Classroom, ClassLink, Clever)
+  - name: Single Sign-On and Gradebook Sync
+  - name: Admin Analytics and Support
+- id: packback-lti-library
+  name: Open-Source LTI 1.3 PHP Library
+  type: free
+  description: >-
+    Packback's open-source LTI 1.3 tool-provider PHP library is freely
+    available under its repository license via GitHub and Packagist. It is a
+    developer building block for LTI tool providers, not access to a Packback
+    product API.
+  entries:
+  - label: lti-1-3-php-library
+    name: lti_php_library
+    type: free
+    metric: license
+    limit: -1
+    timeFrame: perpetual
+    geo: global
+    unit: 1
+    price: free (open source)
+    userMultiplied: false
+  elements:
+  - name: github.com/packbackbooks/lti-1-3-php-library
+  - name: packbackbooks/lti-1p3-tool (Packagist / Composer)
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

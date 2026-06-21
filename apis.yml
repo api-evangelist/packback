@@ -1,0 +1,98 @@
+aid: packback
+url: https://raw.githubusercontent.com/api-evangelist/packback/refs/heads/main/apis.yml
+name: Packback
+kind: company
+description: Packback is an AI-powered instructional platform for higher education and
+  K-12 that delivers real-time, formative feedback on student discussion and writing.
+  Its products - Questions/Discussions, Writing and Deep Dives, and Originality -
+  embed into a school's LMS through the IMS Global LTI standard rather than a public
+  REST API.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Education
+- EdTech
+- AI
+- Discussion
+- Writing Feedback
+- LTI
+- LMS
+created: '2026-06-21'
+modified: '2026-06-21'
+specificationVersion: '0.19'
+apis:
+- aid: packback:questions-discussions
+  name: Packback Questions / Discussions
+  tags:
+  - Discussion
+  - Inquiry
+  - AI Coaching
+  - Education
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://packback.co/product/lti/
+  properties:
+  - url: https://packback.co/platform/
+    type: Documentation
+  - url: openapi/packback-openapi.yml
+    type: OpenAPI
+  description: Inquiry-based student discussion product with built-in AI coaching that
+    helps students ask better questions and write stronger responses, plus automated
+    moderation for instructors. Accessed by students and instructors inside the LMS
+    via LTI; no public REST API is published.
+- aid: packback:writing-deep-dives
+  name: Packback Writing / Deep Dives
+  tags:
+  - Writing Feedback
+  - Essays
+  - AI Coaching
+  - Grading
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://packback.co/product/deep-dives/
+  properties:
+  - url: https://packback.co/platform/
+    type: Documentation
+  - url: openapi/packback-openapi.yml
+    type: OpenAPI
+  description: Long-form writing and essay product (Writing, Deep Dives, Writing Lab)
+    that gives students instant AI feedback on flow, structure, grammar, research
+    quality, and formatting, with rubric-aligned AI-assisted grading for instructors.
+    Delivered through the LMS via LTI; no public REST API is published.
+- aid: packback:lti-integration
+  name: Packback LTI Integration
+  tags:
+  - LTI
+  - LMS
+  - Single Sign-On
+  - Gradebook Sync
+  - Interoperability
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://packback.co/lti-integration/
+  properties:
+  - url: https://packback.co/lti-integration/
+    type: Documentation
+  - url: https://github.com/packbackbooks/lti-1-3-php-library
+    type: GitHub
+  - url: openapi/packback-openapi.yml
+    type: OpenAPI
+  description: Packback's integration surface is the IMS Global LTI standard (1EdTech
+    certified for LTI 1.0, 1.2, and 1.3 / LTI Advantage), providing single sign-on,
+    deep linking, and gradebook/grade passback sync across Canvas, Blackboard, Brightspace,
+    Moodle, Schoology, Google Classroom, ClassLink, Clever, and other IMS-compliant
+    LMSs. Packback also maintains an open-source LTI 1.3 PHP tool-provider library.
+common:
+- type: GitHubOrganization
+  url: https://github.com/packbackbooks
+- type: LinkedIn
+  url: https://www.linkedin.com/company/packback
+- type: Website
+  url: https://packback.co
+- type: Documentation
+  url: https://help.packback.co
+- type: Plans
+  url: plans/packback-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/packback-rate-limits.yml
+- type: FinOps
+  url: finops/packback-finops.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

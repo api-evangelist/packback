@@ -1,0 +1,10 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Packback API",
+    "version": "1.0",
+    "description": "Packback does not publish a public, developer-facing REST API. Its products (Questions/Discussions, Writing, Deep Dives) are accessed by students and instructors inside the LMS via the IMS Global LTI standard (1EdTech certified for LTI 1.0, 1.2, and 1.3 / LTI Advantage). The only published developer artifact is Packback's open-source LTI 1.3 PHP tool-provider library at https://github.com/packbackbooks/lti-1-3-php-library. This collection therefore contains no callable HTTP operations."
+  },
+  "items": [],
+  "bundled": true
+}
