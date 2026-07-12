@@ -79,6 +79,8 @@ apis:
     Moodle, Schoology, Google Classroom, ClassLink, Clever, and other IMS-compliant
     LMSs. Packback also maintains an open-source LTI 1.3 PHP tool-provider library.
 common:
+- type: DomainSecurity
+  url: security/packback-domain-security.yml
 - type: GitHubOrganization
   url: https://github.com/packbackbooks
 - type: LinkedIn
@@ -93,6 +95,8 @@ common:
   url: rate-limits/packback-rate-limits.yml
 - type: FinOps
   url: finops/packback-finops.yml
+- url: https://packback.co/feed/
+  type: Blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
