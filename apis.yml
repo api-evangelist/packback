@@ -7,7 +7,19 @@ description: Packback is an AI-powered instructional platform for higher educati
   Its products - Questions/Discussions, Writing and Deep Dives, and Originality -
   embed into a school's LMS through the IMS Global LTI standard rather than a public
   REST API.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Free
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/packback.png
 tags:
 - Education
 - EdTech
