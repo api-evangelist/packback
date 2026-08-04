@@ -1,0 +1,14 @@
+{
+  "provider": "packback",
+  "sources": [
+    "packback-openapi.yml"
+  ],
+  "outputs": [],
+  "archived": [
+    "archived packback-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
