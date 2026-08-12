@@ -44,7 +44,7 @@ apis:
   properties:
   - url: https://packback.co/platform/
     type: Documentation
-  - url: openapi/packback-openapi.yml
+  - url: openapi/_original/packback-openapi.yml
     type: OpenAPI
   description: Inquiry-based student discussion product with built-in AI coaching that
     helps students ask better questions and write stronger responses, plus automated
@@ -62,7 +62,7 @@ apis:
   properties:
   - url: https://packback.co/platform/
     type: Documentation
-  - url: openapi/packback-openapi.yml
+  - url: openapi/_original/packback-openapi.yml
     type: OpenAPI
   description: Long-form writing and essay product (Writing, Deep Dives, Writing Lab)
     that gives students instant AI feedback on flow, structure, grammar, research
@@ -83,7 +83,7 @@ apis:
     type: Documentation
   - url: https://github.com/packbackbooks/lti-1-3-php-library
     type: GitHub
-  - url: openapi/packback-openapi.yml
+  - url: openapi/_original/packback-openapi.yml
     type: OpenAPI
   description: Packback's integration surface is the IMS Global LTI standard (1EdTech
     certified for LTI 1.0, 1.2, and 1.3 / LTI Advantage), providing single sign-on,
