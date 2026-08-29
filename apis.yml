@@ -7,6 +7,17 @@ description: Packback is an AI-powered instructional platform for higher educati
   Its products - Questions/Discussions, Writing and Deep Dives, and Originality -
   embed into a school's LMS through the IMS Global LTI standard rather than a public
   REST API.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: unknown
