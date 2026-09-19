@@ -35,7 +35,7 @@ tags:
 - Education
 - EdTech
 - Artificial Intelligence
-- Discussion
+- Discussions
 - Writing Feedback
 - LTI
 - LMS
@@ -54,6 +54,11 @@ apis:
 - aid: packback:questions-discussions
   name: Packback Questions / Discussions
   tags:
+  - Discussions
+  - Inquiry
+  - AI Coaching
+  - Education
+  tags_raw:
   - Discussion
   - Inquiry
   - AI Coaching
@@ -90,6 +95,12 @@ apis:
 - aid: packback:lti-integration
   name: Packback LTI Integration
   tags:
+  - LTI
+  - LMS
+  - SSO
+  - Gradebook Sync
+  - Interoperability
+  tags_raw:
   - LTI
   - LMS
   - Single Sign-On
