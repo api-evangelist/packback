@@ -112,3 +112,37 @@ plans:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - subscription
+  units:
+  - negotiated
+  - seat
+  plans:
+  - name: Per-Student / Course Access
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - other
+    periods:
+    - term
+  - name: Institutional / Site License
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - negotiated
+    periods:
+    - year
+  - name: Open-Source LTI 1.3 PHP Library
+    access: free
+    model: free
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - one-time
