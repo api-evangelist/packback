@@ -1,4 +1,4 @@
-# Packback (packback)
+# Packback
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,100 +66,110 @@
 
 Packback is an AI-powered instructional platform for higher education and K-12 that delivers real-time, formative feedback on student discussion and writing. Its products - Questions/Discussions, Writing and Deep Dives, and Originality - embed into a school's LMS through the IMS Global LTI standard rather than a public REST API.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/packback/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/packback/refs/heads/main/apis.yml)
+**Areas:** Education · EdTech · Artificial Intelligence · Discussions · Writing Feedback · LTI · LMS
 
-> **API availability note:** Packback does **not** publish a public, developer-facing REST API. Access to its products is delivered to students and instructors inside their Learning Management System (LMS) via the IMS Global **LTI** standard (1EdTech certified for LTI 1.0, 1.2, and 1.3 / LTI Advantage), providing single sign-on, deep linking, and gradebook/grade passback sync. The only published developer artifact is Packback's open-source [LTI 1.3 PHP tool-provider library](https://github.com/packbackbooks/lti-1-3-php-library). The OpenAPI document in this repo therefore uses an empty `paths` object and records this honestly.
+## Packback on APIs.io
 
-## Tags
+Everything profiled for Packback is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/packback/](https://apis.io/providers/packback/)** — or go straight to one of the APIs or properties below.
 
-- Education
-- EdTech
-- AI
-- Discussion
-- Writing Feedback
-- LTI
-- LMS
+### APIs (3)
 
-## Timestamps
+- [Packback Questions / Discussions](https://apis.io/apis/packback/questions-discussions/) — Inquiry-based student discussion product with built-in AI coaching that helps students ask better questions and write stronger responses, plus automated…
+- [Packback Writing / Deep Dives](https://apis.io/apis/packback/writing-deep-dives/) — Long-form writing and essay product (Writing, Deep Dives, Writing Lab) that gives students instant AI feedback on flow, structure, grammar, research…
+- [Packback LTI Integration](https://apis.io/apis/packback/lti-integration/) — Packback's integration surface is the IMS Global LTI standard (1EdTech certified for LTI 1.0, 1.2, and 1.3 / LTI Advantage), providing single sign-on, deep…
 
-- **Created:** 2026-06-21
-- **Modified:** 2026-06-21
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Packback Questions / Discussions
+#### Collections (1)
 
-Inquiry-based student discussion product with built-in AI coaching that helps students ask better questions and write stronger responses, plus automated moderation for instructors. Accessed by students and instructors inside the LMS via LTI; no public REST API is published.
+Postman and Open Collection request collections.
 
-- **Human URL:** [https://packback.co/product/lti/](https://packback.co/product/lti/)
+- [Packback API](https://apis.io/collections/packback/open-packback/)
 
-#### Tags
+#### Security (1)
 
-- Discussion
-- Inquiry
-- AI Coaching
-- Education
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Packback Domain Security](https://apis.io/security/packback/packback-domain-security/)
 
-- [Documentation](https://packback.co/platform/)
-- [OpenAPI](openapi/packback-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/packback.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/packback.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Plans and pricing (1)
 
-### Packback Writing / Deep Dives
+Published plans, tiers and prices.
 
-Long-form writing and essay product (Writing, Deep Dives, Writing Lab) that gives students instant AI feedback on flow, structure, grammar, research quality, and formatting, with rubric-aligned AI-assisted grading for instructors. Delivered through the LMS via LTI; no public REST API is published.
+- [Packback Plans Pricing](https://apis.io/plans/packback/packback-plans-pricing/)
 
-- **Human URL:** [https://packback.co/product/deep-dives/](https://packback.co/product/deep-dives/)
+#### Rate limits (1)
 
-#### Tags
+Published request limits.
 
-- Writing Feedback
-- Essays
-- AI Coaching
-- Grading
+- [Packback Rate Limits](https://apis.io/rate-limits/packback/packback-rate-limits/)
 
-#### Properties
+#### FinOps (1)
 
-- [Documentation](https://packback.co/platform/)
-- [OpenAPI](openapi/packback-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/packback.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/packback.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+What the API costs to run, by operation.
 
-### Packback LTI Integration
+- [Packback Finops](https://apis.io/finops/packback/packback-finops/)
 
-Packback's integration surface is the IMS Global LTI standard (1EdTech certified for LTI 1.0, 1.2, and 1.3 / LTI Advantage), providing single sign-on, deep linking, and gradebook/grade passback sync across Canvas, Blackboard, Brightspace, Moodle, Schoology, Google Classroom, ClassLink, Clever, and other IMS-compliant LMSs. Packback also maintains an open-source LTI 1.3 PHP tool-provider library.
+## Where to find this API
 
-- **Human URL:** [https://packback.co/lti-integration/](https://packback.co/lti-integration/)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Tags
-
-- LTI
-- LMS
-- Single Sign-On
-- Gradebook Sync
-- Interoperability
-
-#### Properties
-
-- [Documentation](https://packback.co/lti-integration/)
-- [GitHub](https://github.com/packbackbooks/lti-1-3-php-library)
-- [OpenAPI](openapi/packback-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/packback.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/packback.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/packbackbooks)
-- [LinkedIn](https://www.linkedin.com/company/packback)
 - [Website](https://packback.co)
 - [Documentation](https://help.packback.co)
-- [Plans](plans/packback-plans-pricing.yml)
-- [Rate Limits](rate-limits/packback-rate-limits.yml)
-- [Fin Ops](finops/packback-finops.yml)
+- [Blog](https://packback.co/feed/)
+- [GitHub](https://github.com/packbackbooks)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 15.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 25.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 7.9 |
+
+**Agent readiness 13.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.5** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/packback/](https://apis.io/providers/packback/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Packback: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/packback/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
